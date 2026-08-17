@@ -13,10 +13,10 @@
       environment.systemPackages = with pkgs; [
 
         rustdesk
-	sunshine
-	moonlight-qt
-	tailscale
-	trayscale
+        sunshine
+        moonlight-qt
+        tailscale
+        trayscale
 
       ];
 

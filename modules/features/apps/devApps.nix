@@ -10,11 +10,12 @@
 
       environment.systemPackages = with pkgs; [
         git
-	eclipses.eclipse-java
+        eclipses.eclipse-java
         vscode
-	zed-editor
-	cmake
-	meld
+        zed-editor
+        cmake
+        meld
+        gnupg
       ];
 
     };
