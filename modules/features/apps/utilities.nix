@@ -3,7 +3,7 @@
   flake.nixosModules.utilityApps = { config, pkgs, lib, ... }: {
 
     options = {
-      utilityApps.enable = lib.mkEnableOption "enables utitityApps"
+      utilityApps.enable = lib.mkEnableOption "enables utitityApps";
     };
 
     config = lib.mkIf config.gamingApps.enable {
