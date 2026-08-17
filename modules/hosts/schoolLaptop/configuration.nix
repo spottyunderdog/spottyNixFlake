@@ -2,9 +2,16 @@
 
   flake.nixosModules.drNixConfiguration = { config, pkgs, ... }: {
   imports =
-    [ 
+    [
       self.nixosModules.drNixHardware
+      self.nixosModules.packages
+      self.nixosModule.homeManager
     ];
+
+  # Enable Some Optional Packages:
+  devApps.enable = true;
+  gamingApps.enable = true;
+  remoteAccessApps.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."spotty" = {
@@ -31,7 +38,7 @@
 
   # Enable Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
   networking.hostName = "DrNix"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -107,64 +114,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-40.10.5"
-  ];
-  environment.systemPackages = with pkgs; [
-    bottles
-    btop
-    btrfs-assistant
-    easyeffects
-    eclipses.eclipse-java
-    mediawriter
-    kdePackages.filelight
-    filezilla
-    firefox
-    goverlay
-    handbrake
-    heroic
-    jellyfin-desktop
-    kdePackages.kcalc
-    kdePackages.kdeconnect-kde
-    kdePackages.kdenlive
-    kitty
-    mission-center
-    mkvtoolnix
-    mkvtoolnix-cli
-    moonlight-qt
-    neovim
-    obs-studio
-    obsidian
-    openrgb
-    prismlauncher
-    protonmail-desktop
-    proton-pass
-    proton-vpn
-    protonplus
-    protontricks
-    qbittorrent
-    r2modman
-    rustdesk
-    spotify
-    steam
-    sublime3
-    subtitleedit
-    sunshine
-    tailscale
-    trayscale
-    upscaler
-    vesktop
-    vim
-    vivaldi
-    vivaldi-ffmpeg-codecs
-    vlc
-    vscode
-    winboat
-    winetricks
-    git
-    gnupg
-  ];
 
   # Enables some alternative shells
   programs.zsh.enable = true;

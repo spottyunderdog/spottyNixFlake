@@ -5,19 +5,16 @@
       self.nixosModules.gamingApps
       self.nixosModules.mediaApps
       self.nixosModules.miscApps
-      self.nixosModules.remoteAccesApps
+      self.nixosModules.remoteAccessApps
       self.nixosModules.utilityApps
-      self.nixosModules.virtualizationApps
     ];
 
-    devApps.enable = lib.mkDefault true;
+    devApps.enable = lib.mkDefault false;
     gamingApps.enable = lib.mkDefault false;
     mediaApps.enable = lib.mkDefault true;
     miscApps.enable = lib.mkDefault true;
-    remoteAccesApps.enable = lib.mkDefault false;
+    remoteAccessApps.enable = lib.mkDefault false;
     utilityApps.enable = lib.mkDefault true;
-    virtualizationApps.enable = lib.mkDefault false;
-
 
   };
 }

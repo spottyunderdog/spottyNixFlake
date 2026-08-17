@@ -15,6 +15,8 @@
         firefox
         vivaldi
         vivaldi-ffmpeg-codecs
+        neovim
+        vim
       ];
     };
 

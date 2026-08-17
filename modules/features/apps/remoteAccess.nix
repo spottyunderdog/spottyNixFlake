@@ -1,14 +1,14 @@
 { self, inputs, ... }: {
 
-  flake.nixosmodules.remoteAccesApps = { config, pkgs, lib, ... }: {
+  flake.nixosModules.remoteAccessApps = { config, pkgs, lib, ... }: {
     
     options = {
 
-      remoteAccesApps.enable = lib.mkEnableOption "enable remoteAccesApps";
+      remoteAccessApps.enable = lib.mkEnableOption "enable remoteAcces";
 
     };
 
-    config = lib.mkIf config.remoteAccesApps.enable {
+    config = lib.mkIf config.remoteAccessApps.enable {
 
       environment.systemPackages = with pkgs; [
 
