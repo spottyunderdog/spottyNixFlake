@@ -19,7 +19,15 @@
         inputs.home-manager.flakeModules.home-manager
       ];
       flake = {
-        homeModule.myConfs = import ./modules/features/homemanager/homemanager.nix;
+        homeModules.myConfs = import ./modules/features/homemanager/homemanager.nix;
+        homeConfigurationsz.spotty = home-manager.lib.homeManagerConfiguration {
+          inputs.self.homeModules.myConfs
+          {
+          home.username = "spotty";
+          home.homeDirectory = "/home/spotty";
+          home.stateVerision = "26.02";
+          }
+        }
       };
     };
 }
