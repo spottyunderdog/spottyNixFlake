@@ -5,7 +5,7 @@
     [
       self.nixosModules.drNixHardware
       self.nixosModules.packages
-      self.nixosModule.homeManager
+      self.homeConfigurations.spotty
     ];
 
   # Enable Some Optional Packages:
@@ -22,16 +22,7 @@
     packages = with pkgs; [
     #  thunderbird
     ];
-    programs.zed-editor = {
-      extensions = [ "nix" "toml" "rust" ];
-      userSettings = {
-        theme = {
-          mode = "dark";
-        };
-        hour_format = "hour24";
-        vim_mode = false;
-      };
-    }
+
   };
 
 
