@@ -7,30 +7,5 @@
     home-manager.url = "github:nix-community/home-manager";
   };
 
-  outputs = inputs@{
-    flake-parts,
-    home-manager,
-    nixpkgs,
-    ...
-  }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [
-        (inputs.import-tree ./modules)
-        inputs.home-manager.flakeModules.home-manager
-      ];
-      flake = {
-        homeModules.myConfs = import ./modules/features/homemanager/homemanager.nix;
-        homeConfigurationsz.spotty = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs { system = "x86_64-linux"; };
-          modules = [
-            inputs.self.homeModules.myConfs
-            {
-              home.username = "spotty";
-              home.homeDirectory = "/home/spotty";
-              home.stateVerision = "26.02";
-            }
-          ];
-        };
-      };
-    };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake{inherit inputs;} (inputs.import-tree ./modules);
 }

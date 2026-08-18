@@ -5,6 +5,7 @@
     [
       self.nixosModules.drNixHardware
       self.nixosModules.packages
+      self.nixosModules.myHomeManager
     ];
 
   # Enable Some Optional Packages:
@@ -21,9 +22,8 @@
     packages = with pkgs; [
     #  thunderbird
     ];
-
   };
-
+  home-manager.users.spotty = self.homemodules.spottyModule;
 
   # Bootloader.
   boot.loader = {
@@ -110,7 +110,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -123,11 +123,11 @@
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.mtr.enable = true;
+  programs.gnupg.agent = {
+     enable = true;
+     enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
@@ -148,7 +148,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
 
-}
-;
+};
 
 }

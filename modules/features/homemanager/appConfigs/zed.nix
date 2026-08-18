@@ -1,4 +1,4 @@
-{ self, inputs }: {
+{ self, inputs, ... }: {
   flake.homeModules.zed = { config, pkgs, ... }: {
     programs.zed-editor = {
       mutableUserSettings = true;
