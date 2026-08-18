@@ -2,11 +2,11 @@
   flake.homeModules.zed = { config, pkgs, ... }: {
     programs.zed-editor = {
       mutableUserSettings = true;
-      extensions = {
+      extensions = [
         "nix"
         "toml"
         "java"
-      };
+      ];
     };
   };
 }
