@@ -23,7 +23,7 @@
     #  thunderbird
     ];
   };
-  home-manager.users.spotty = self.homemodules.spottyModule;
+  home-manager.users.spotty = self.homeModules.spottyModule;
 
   # Bootloader.
   boot.loader = {
