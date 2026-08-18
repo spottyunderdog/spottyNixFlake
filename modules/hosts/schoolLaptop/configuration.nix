@@ -5,7 +5,7 @@
     [
       self.nixosModules.drNixHardware
       self.nixosModules.packages
-      self.homeConfigurations.spotty
+      self.nixosModules.homeManager
     ];
 
   # Enable Some Optional Packages:
