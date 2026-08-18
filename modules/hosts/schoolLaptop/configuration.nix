@@ -5,7 +5,6 @@
     [
       self.nixosModules.drNixHardware
       self.nixosModules.packages
-      self.nixosModules.homeManager
     ];
 
   # Enable Some Optional Packages:
