@@ -30,7 +30,7 @@
               home.stateVerision = "26.02";
             }
           ];
-        }
+        };
       };
     };
 }
