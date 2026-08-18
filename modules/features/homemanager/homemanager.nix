@@ -3,7 +3,7 @@
       #app config files
     ];
 
-    home.username = "spotty"
-    home.directory = "/home/spotty"
-    home.stateVersion = "26.05"
+    home.username = "spotty";
+    home.directory = "/home/spotty";
+    home.stateVersion = "26.05";
 }
