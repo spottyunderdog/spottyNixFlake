@@ -1,4 +1,4 @@
-{ self, 2inputs, ... }: {
+{ self, inputs, ... }: {
   flake.homeModules.zed = { config, pkgs, lib, ... }: {
     options = {
       zedConfig.enable libMkEnableOption "enables zed-ediotr config"
