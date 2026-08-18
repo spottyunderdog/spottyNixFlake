@@ -21,12 +21,15 @@
       flake = {
         homeModules.myConfs = import ./modules/features/homemanager/homemanager.nix;
         homeConfigurationsz.spotty = home-manager.lib.homeManagerConfiguration {
-          inputs.self.homeModules.myConfs
-          {
-          home.username = "spotty";
-          home.homeDirectory = "/home/spotty";
-          home.stateVerision = "26.02";
-          }
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
+          modules = [
+            inputs.self.homeModules.myConfs
+            {
+              home.username = "spotty";
+              home.homeDirectory = "/home/spotty";
+              home.stateVerision = "26.02";
+            }
+          ];
         }
       };
     };
