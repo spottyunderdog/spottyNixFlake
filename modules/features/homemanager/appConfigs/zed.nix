@@ -20,11 +20,6 @@
             light = "Ayu Mirage";
           };
         };
-        #show_whitespaces = "all";
-        #base_keymap = "VSCode";
-        #hour_format = "hour24";
-        #vim_mode = false;
-        #icon_theme = "Catppuccin Mocha";
       };
     };
   };

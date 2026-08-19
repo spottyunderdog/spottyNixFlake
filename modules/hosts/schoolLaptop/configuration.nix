@@ -12,7 +12,7 @@
     # Adds A swapfile
     swapDevices = [{
       device = "/var/lib/swapfile";
-      size = 16*1024; # 16 GiB
+      size = 48*1024; # 48 GiB
     }];
     boot.zswap = {
       enable = true;
@@ -21,6 +21,18 @@
       maxPoolPercent = 25;
       shrinkerEnabled = true;
     };
+    # Hibernation
+    boot.initrd.systemd.enable = true;
+    # Power Management
+    powerManagement.enable = true;
+    systemd.sleep.settings.Sleep = {
+      AllowHibernation = "yes";
+      AllowHybridSleep = "yes";
+      AllowSuspend = "yes";
+      AllowSuspendThenHibernate = "yes";
+      HibernateDelaySec = "15min";
+    };
+
 
     # Enable Some Optional Packages:
     devApps.enable = true;
