@@ -39,6 +39,7 @@
     devApps.enable = true;
     gamingApps.enable = true;
     remoteAccessApps.enable = true;
+    vmwareVMs.enable = true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users."spotty" = {
@@ -134,6 +135,7 @@
     # Enables some alternative shells
     programs.zsh.enable = true;
     programs.fish.enable = true;
+    programs.bash.enable = true;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.

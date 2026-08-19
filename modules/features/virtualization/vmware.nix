@@ -5,7 +5,7 @@
       vmwareVMs.enable = lib.mkEnableOption "enables VMWare Workstation, & virtualization";
     };
 
-    config = lib.mkIf vmwareVms.enable {
+    config = lib.mkIf config.vmwareVMs.enable  {
        virtualisation.vmware.host.enable = true;
        environment.systemPackages = with pkgs; [
          vmware-workstation

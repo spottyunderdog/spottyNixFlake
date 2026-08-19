@@ -20,7 +20,6 @@
       self.homeModules.appConfigs
     ];
     zedConfig.enable = true;
-    programs.bash.enable = true;
     programs.bash.shellAliases.ll = "ls -l";
 
     home.packages = [ ];
