@@ -18,6 +18,7 @@
         filezilla
         kdePackages.kcalc
         kdePackages.kdeconnect-kde
+        kdePackages.filelight
         kitty
         mission-center
         openrgb

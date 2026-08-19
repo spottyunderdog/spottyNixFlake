@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  
+
   flake.nixosModules.mediaApps = { config, pkgs, lib, ... }: {
 
     options = {
@@ -11,19 +11,19 @@
       environment.systemPackages = with pkgs; [
 
         jellyfin-desktop
-	kdePackages.kdenlive
-	mkvtoolnix
-	mkvtoolnix-cli
-	obs-studio
-	handbrake
-	vlc
-	subtitleedit
-	spotify
+        kdePackages.kdenlive
+        mkvtoolnix
+        mkvtoolnix-cli
+        obs-studio
+        handbrake
+        vlc
+        subtitleedit
+        spotify
 
       ];
 
     };
 
-  };  
+  };
 
 }
