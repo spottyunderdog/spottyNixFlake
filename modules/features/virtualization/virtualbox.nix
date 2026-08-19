@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.virtualbox = { pkgs, lib, config, ... }: {
+  flake.nixosModules.virtualboxVMs = { pkgs, lib, config, ... }: {
 
   };
 

@@ -40,6 +40,7 @@
     gamingApps.enable = true;
     remoteAccessApps.enable = true;
     vmwareVMs.enable = true;
+    virtManVMs.enable = true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users."spotty" = {
@@ -155,6 +156,12 @@
     # networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
     # networking.firewall.enable = false;
+
+    nix.gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 2d";
+    };
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
