@@ -7,6 +7,7 @@
         self.nixosModules.packages
         self.nixosModules.myHomeManager
         self.nixosModules.bootLoader
+        self.nixosModules.virtualization
       ];
 
     # Adds A swapfile
@@ -54,7 +55,7 @@
     # Enable Experimental Features
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    networking.hostName = "DrNix"; # Define your hostname.
+    networking.hostName = "DrNixasauros"; # Define your hostname.
     networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Configure network proxy if necessary
