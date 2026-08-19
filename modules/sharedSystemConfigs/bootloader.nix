@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flakes.nixosModules.bootLoader = { pkgs, config, ... }: {
+  flake.nixosModules.bootLoader = { pkgs, config, ... }: {
     boot.loader = {
       grub = {
         enable = true;

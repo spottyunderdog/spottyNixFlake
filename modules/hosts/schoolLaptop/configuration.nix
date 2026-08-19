@@ -20,7 +20,6 @@
       acceptThresholdPercent = 90;
       maxPoolPercent = 25;
       shrinkerEnabled = true;
-      zpool = if kernel >= 6.3 then "zsmalloc" else "zbud";
     };
 
     # Enable Some Optional Packages:
