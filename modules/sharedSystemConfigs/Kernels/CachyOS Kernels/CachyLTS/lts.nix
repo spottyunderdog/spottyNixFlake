@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.cachyLts { pkgs, config, ... }: {
+  flake.nixosModules.cachyLts = { pkgs, config, ... }: {
     boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts;
   };
 }
