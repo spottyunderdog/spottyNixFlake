@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.cachyLatest = { pkgs, config, ... }: {
+  flake.nixosModules.cachyLatest = { pkgs, config, lib, ... }: {
     options = {
       cachyLatestKernel.enable = lib.mkEnableOption "Enables Latest CachyOS Kernel";
     };

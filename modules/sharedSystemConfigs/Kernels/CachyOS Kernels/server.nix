@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.cachyServer = { pkgs, config, ... }: {
+  flake.nixosModules.cachyServer = { pkgs, config, lib, ... }: {
     options = {
       cachyServerKernel.enable = lib.mkEnableOption "Enable CachyOS's Server Kernel";
     };
