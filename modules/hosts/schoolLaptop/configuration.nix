@@ -8,6 +8,7 @@
         self.nixosModules.myHomeManager
         self.nixosModules.bootLoader
         self.nixosModules.virtualization
+        self.nixosModules.kernel
       ];
 
     # Adds A swapfile
