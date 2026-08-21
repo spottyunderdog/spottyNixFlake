@@ -7,5 +7,13 @@
     imports = [
       self.nixosModules.cachyKernels
     ];
+    # Cachy LTS Kernel Default
+    cachyLtsKernel.enable = lib.mkDefault false;
+    # Cachy Latest Kernel Default
+    cachyLatestKernel.enable = lib.mkDefault false;
+    # Cachy Hardened Kernel Default
+    cachyHardenedKernel.enable = lib.mkDefault false;
+    # Cachy Server Kernel
+    cachyServerKernel.enable = lib.mkDefault false;
   };
 }
