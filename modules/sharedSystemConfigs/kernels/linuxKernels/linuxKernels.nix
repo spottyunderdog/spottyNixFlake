@@ -8,7 +8,7 @@
     ];
     linuxKernelNixDefault.enable = lib.mkDefault true;
     linuxLatestKernel.enable = lib.mkDefault false;
-    linuxKernel6_18.enable = lib.mkDefault false;
+    linuxKernel6_12.enable = lib.mkDefault false;
     linuxKernel6_18.enable = lib.mkDefault false;
   };
 }
