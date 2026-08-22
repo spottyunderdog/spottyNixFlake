@@ -6,6 +6,7 @@
 
     imports = [
       self.nixosModules.cachyKernels
+      self.nixosModules.linuxKernels
     ];
     # Cachy LTS Kernel Default
     cachyLtsKernel.enable = lib.mkDefault false;
