@@ -12,8 +12,15 @@
     # I recommend reading the Cachy OS Wiki if you are interested,
     # The bellow artcile can help you figure out what one to use.
     # Read: https://wiki.cachyos.org/features/optimized_repos/
+
+    # Latest Cachy Kernel
     cachyLatestKernel-x86v3.enable = lib.mkDefault false;
     cachyLatestKernel-x86v4.enable = lib.mkDefault false;
     cachyLatestKernel-zen4.enable = lib.mkDefault false; # Note: Works on both Zen 4 and Zen 5 CPUS
+
+    # LTS Cachy Kernel
+    cachyLtsKernel-x86v3.enable = lib.mkDefault false;
+    cachyLtsKernel-x86v4.enable = lib.mkDefault false;
+    cachyLtsKernel-zen4.enable = lib.mkDefault false;
   };
 }

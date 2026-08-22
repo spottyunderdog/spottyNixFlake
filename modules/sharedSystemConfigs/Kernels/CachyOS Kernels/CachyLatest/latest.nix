@@ -1,6 +1,7 @@
 { self, inputs, ... }: {
   flake.nixosModules.cachyLatest = { pkgs, config, lib, ... }: {
     imports = [
+      # Architecture Specific Kernel Verions.
       self.nixosModules.cachyLatest-x86v3
       self.nixosModules.cachyLatest-x86v4
       self.nixosModules.cachyLatest-zen4
