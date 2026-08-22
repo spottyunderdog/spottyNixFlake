@@ -13,7 +13,7 @@
 
     # kernel
     # ONLY USE ONE
-    cachyLatestKernel.enable = true;
+    cachyLatestKernel-zen4.enable = true;
     # Adds A swapfile
     swapDevices = [{
       device = "/var/lib/swapfile";
