@@ -15,5 +15,8 @@
     cachyHardenedKernel.enable = lib.mkDefault false;
     # Cachy Server Kernel
     cachyServerKernel.enable = lib.mkDefault false;
+    # Architechture Versions, Only enable if your know what your doing
+    cachyLatest-x86v3Kernel.enable = lib.mkDefault false;
+
   };
 }

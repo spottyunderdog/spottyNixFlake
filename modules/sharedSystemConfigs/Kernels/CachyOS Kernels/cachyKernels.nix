@@ -6,6 +6,7 @@
       self.nixosModules.cachyServer
       self.nixosModules.cachyHardened
     ];
-
+    # Architechture Versions, Only enable if your know what your doing
+    cachyLatest-x86v3Kernel.enable = lib.mkDefault false;
   };
 }

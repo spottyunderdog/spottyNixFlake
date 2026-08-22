@@ -3,8 +3,8 @@
     options = {
       cachyLatest-x86v3Kernel.enable = lib.mkEnableOption "Enables Latest CachyOS Kernel";
     };
-    config = lib.mkIf config.cachyLatestKernel.enable {
-      boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86v3;
+    config = lib.mkIf config.cachyLatestKernel-x86v3.enable {
+      boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
     };
   };
 }
