@@ -12,8 +12,9 @@
       ];
 
     # kernel
-    # ONLY USE ONE
     cachyLatestKernel-zen4.enable = true;
+    linuxKernelNixDefault.enable = false; # Disable this kernel when using a different Kernel.
+
     # Adds A swapfile
     swapDevices = [{
       device = "/var/lib/swapfile";
